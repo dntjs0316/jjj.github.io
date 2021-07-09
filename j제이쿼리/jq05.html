@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상단메뉴</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link href="../css/090.css" rel="stylesheet"/>
+</head>
+<body>
+    
+    <header>
+        <div class="header_top">
+            <h1><a href="#">LOGO</a></h1>
+
+            <div class="menu">
+                <i class="fas fa-bars">
+                    <span>메뉴 열기</span>
+                </i>
+            </div><!-- menu end -->
+        </div><!-- header_top end -->
+
+        <nav>
+            <div class="close">
+                <i class="fas fa-times">
+                    <span>메뉴 닫기</span>
+                </i>
+            </div><!-- close end -->
+
+            <ul>
+                <li><a href="#">menu01</a></li>
+                <li><a href="#">menu02</a></li>
+                <li><a href="#">menu03</a></li>
+                <li><a href="#">menu04</a></li>
+                <li><a href="#">menu05</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+
+
+        $(function(){
+            /* $('.menu').click(function(){
+                $('nav').slideDown();
+            });
+
+            $('.close').click(function(){
+                $('nav').slideUp();
+            }); */
+
+           /* $('.menu').click(function(){
+                $('nav').css({
+                    'top' : '0',
+                    'transition' : '.3s'
+                });
+            }); */
+
+            /* $('.close').click
+            (function(){
+                $('nav').css({
+                    'top' : '-100%',
+                    'transition' : '.3s'
+                });*/
+
+                $('.menu').click(function(){
+                    $('nav').slideToggle();
+                });
+
+                $('.close').click(function(){
+                    $('nav').slideToggle();
+                });
+
+            }); 
+       
+        
+
+    </script>
+
+</body>
+</html>

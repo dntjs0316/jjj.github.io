@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li{list-style:none;}
+a{color:#333; display: block; text-decoration: none;}
+
+
+/* nav */
+
+nav{
+    width:640px;
+    margin:10px auto;
+    text-align: center;
+}
+
+nav > ul > li{
+    width:640px;
+    line-height:40px;
+}
+
+nav > ul > li > a{
+    height:40px;
+    line-height:40px;
+    background-color: cornflowerblue;
+    color:white;
+    font-size:20px;
+    font-size:bold;
+}
+
+.depth02 {
+    display: none;
+}
+
+.depth02 li{
+    line-height:50px;
+    background-color:papayawhip;
+    border-bottom:1px dashed rgb(255, 194, 95);
+}
+
+.depth01 > a.on{
+    background-color: pink;
+}

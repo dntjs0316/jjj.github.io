@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴풀드롭다운</title>
+    <link href="../css/jq06.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li class="depth01">
+                    <a href="#">1차 메뉴 01</a>
+                    <ul class="depth02">
+                        <li><a href="#">2차메뉴 01-01</a></li>
+                        <li><a href="#">2차메뉴 01-02</a></li>
+                        <li><a href="#">2차메뉴 01-03</a></li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+                <li class="depth01">
+                    <a href="#">1차 메뉴 02</a>
+                    <ul class="depth02">
+                        <li><a href="#">2차메뉴 02-01</a></li>
+                        <li><a href="#">2차메뉴 02-02</a></li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+                <li class="depth01">
+                    <a href="#">1차 메뉴 03</a>
+                    <ul class="depth02">
+                        <li><a href="#">2차메뉴 03-01</a></li>
+                        <li><a href="#">2차메뉴 03-02</a></li>
+                        <li><a href="#">2차메뉴 03-02</a></li>
+                    </ul><!-- .depth02 end -->
+                </li><!-- .depth01 end -->
+            </ul>
+        </nav>
+    </header>
+
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //mouseover() : 마우스 올렸을 때
+            //mouseout() : 마우스 벗어났을 때
+            $('nav > ul > li').mouseover(function(){
+                $('.depth02').stop().slideDown();
+            });
+            $('nav > ul > li').mouseout(function(){
+                $('.depth02').stop().slideUp();
+            });
+
+
+        });
+    </script>
+    
+</body>
+</html>

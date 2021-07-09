@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색박스만들기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link href="../css/088.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+
+        <div class="header_top">
+            <div class="menu">
+                <a href="#">
+                    <i class="fas fa-bars">
+                        <span>메뉴보기</span>
+                    </i>
+                </a>
+            </div><!-- .menu end -->
+            <h1>
+                <a href="#">LOGO</a>
+            </h1>
+            <div class="search_icon">
+                <a href="#">
+                    <i class="fas fa-search">
+                        <span>검색하기</span>
+                    </i>
+                </a>
+            </div>
+        </div><!-- header_top end -->
+
+        <div class="search">
+            <input type="text" placeholder="정보를 입력해주세요."/>
+            <button>검색</button>
+        </div><!-- search end -->
+    
+        <script src="../lib/jquery-3.6.0.min.js"></script>
+        
+        <script>
+            $(function(){
+                $('.search_icon').click(function(){
+                    $('.search').stop().slideToggle();
+                });
+            });
+        </script>
+    
+    </header>
+</body>
+</html>

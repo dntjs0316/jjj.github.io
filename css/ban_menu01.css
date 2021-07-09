@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li{list-style: none;}
+a{color:#333; display: block; text-decoration: none;}
+
+.far{display: none;}
+.fas{display: none;}
+.mobile{display: none;}
+
+header{
+    height:80px;
+    line-height: 80px;
+    background-color: lemonchiffon;
+    text-align: center;
+    background-color: lightblue;
+    position: relative;
+}
+
+.menu_bg{
+    width:100%;
+    height:350px;
+    position:absolute;
+    top:80px;
+    left:0;
+    background-color: lightgrey;
+    z-index: 1;
+    display: none;
+}
+
+.header{
+    max-width:1440px;
+    width:calc(100% - 40px);
+    margin:0 auto;
+    text-align: center;
+}
+
+header::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header h1{
+    float:left;
+}
+
+
+.pc > ul > li{
+    display: inline-block;
+    vertical-align: top;
+    width:150px;
+    text-align: center;
+    position: relative;
+    color:#333;
+}
+
+.pc .depth02{
+    position: absolute;
+    left:0;
+    top:80px;
+    width:100%;
+    background-color: lightgrey;
+    z-index: 9;
+    display: none;
+}
+
+.main{
+    height:500px;
+    background-color: lightpink;
+    margin:0 auto;
+    position: relative;
+}
+
+
+
+.main dl{
+    max-width:1440px;
+    width:calc(100% - 40px);
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+@media screen and (max-width:1024px){
+
+    .pc{display : none;}
+
+    .mobile{
+        display: block;
+        position: fixed;
+        top:0;
+        left:-100%;
+        width:80%;
+        height:100%;
+        background-color: #ccc;
+        z-index: 9;
+        transition: .5s;
+    }
+
+    .mobile .depth02{
+        background-color: #fff;
+        display: none;
+    }
+
+    .far, .fas{
+        display: block;
+        position: absolute;
+        right:30px;
+        top:30px;
+        font-size:20px;
+        cursor: pointer;
+    }
+
+    .far{
+        display: none;
+    }
+
+    .depth01 a.on{
+        background-color: rgb(117, 116, 116);
+    }
+
+
+}
